@@ -47,7 +47,7 @@
         remote_src: yes
       become: yes
 
-    - shell: ls -la /var/www
+    - shell: ls -la /var/www/wordpress
       register: ps
     - debug:
         msg: " '{{ ps.stdout_lines }}' "
