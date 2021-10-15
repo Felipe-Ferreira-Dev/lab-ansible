@@ -105,18 +105,18 @@
     
     - name: "Baixa template WordPress"
       become: yes
-        get_url:
-          url: https://downloads.wordpress.org/theme/blocksy.1.8.6.2.zip
-          dest: /var/www/wordpress/wp-content/themes
-          remote_src: yes
+      get_url:
+        url: https://downloads.wordpress.org/theme/blocksy.1.8.6.2.zip
+        dest: /var/www/wordpress/wp-content/themes
+        remote_src: yes
     
     
     - name: "Extrai zip do templante"
       become: yes
-        ansible.builtin.unarchive:
-           src: /var/www/wordpress/wp-content/themes/blocksy.1.8.6.2.zip
-           dest: /var/www/wordpress/wp-content/themes
-           remote_src: yes
+      ansible.builtin.unarchive:
+        src: /var/www/wordpress/wp-content/themes/blocksy.1.8.6.2.zip
+        dest: /var/www/wordpress/wp-content/themes
+        remote_src: yes
              
     
     
