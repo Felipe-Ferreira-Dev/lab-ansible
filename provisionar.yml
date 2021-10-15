@@ -1,0 +1,17 @@
+- hosts: all
+  tasks:
+    
+    - name: "APT Update"
+      become: yes
+      apt:
+        upgrade: yes
+        update_cache: yes
+        cache_valid_time: 86400
+
+        
+    - name: "Instalando apache com sudo no servidor"
+      become: yes
+      apt:
+        name: "apache2"
+        state: latest
+
