@@ -107,8 +107,8 @@
       become: yes
       get_url:
         url: "https://downloads.wordpress.org/theme/blocksy.1.8.6.2.zip"
-        dest: "/var/www/wordpress/wp-content/themes/blocksy.zip"
-       
+        dest: "/var/www/wordpress/wp-content/themes/"
+        
     
     
     - name: "Extrai zip do templante"
